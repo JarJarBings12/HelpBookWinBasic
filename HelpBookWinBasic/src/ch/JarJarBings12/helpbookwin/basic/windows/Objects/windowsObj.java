@@ -17,11 +17,17 @@ public class windowsObj implements WindowsInterface {
 		this.OPENSOUND = OpenSound;
 	}
 	
+	/* Get the System Name of a Window this Name you can't change! </br>
+	 * You can only change it when the Server isn't running if you change it when the </br>
+	 * the Server is Running it will override by Stop the Server.*/
 	@Override
 	public String getSystemName() {
 		return this.SYSTEMNAME;
 	}
 	
+	/* Get the Display Name of a Window this Name you can change</br>
+	 * to rename a Window use the <h4>setDisplayName</h4> Method you see the Change not after </br>
+	 * you use the Method the plugin save ale Changes in by Stop the Server.  */
 	@Override
 	public String getDisplayName() {
 		return this.DISPLAYNAME;
