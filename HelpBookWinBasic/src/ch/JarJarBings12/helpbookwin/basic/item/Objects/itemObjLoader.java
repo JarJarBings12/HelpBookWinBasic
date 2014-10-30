@@ -34,9 +34,10 @@ public class itemObjLoader implements ItemConfigInterface {
 	public String getConfigItemType(windowsObj w, int Slot) {
 		return filelist.s.getString("windows.window."+w.getSystemName()+".ObjList.object"+Slot+".TYPE");
 	}
- 
+	
 	@Override
 	public List<String> getConfigItemLore(windowsObj w, int Slot) {
+		//TODO Finish this Method I have problems with the load of the List
 		List<String> lore = new ArrayList();
 		return lore;
 	}
