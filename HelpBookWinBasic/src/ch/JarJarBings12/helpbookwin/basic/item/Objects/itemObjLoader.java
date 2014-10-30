@@ -56,4 +56,6 @@ public class itemObjLoader implements ItemConfigInterface {
 	public String getConfigItemActionMessage(windowsObj w, int Slot) {
 		return filelist.s.getString("windows.window."+w.getSystemName()+".ObjList.object"+Slot+".ACTION.MESSAGE");
 	}
+	
+	//TODO When the ItemConfigInterface is Finish add the Methods
 }
