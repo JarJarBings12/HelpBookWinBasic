@@ -15,21 +15,50 @@ public class itemObjLoader implements ItemConfigInterface {
 		
 	}
 	
+	/* Get the Display Name of a Item out of the Configuration */
 	@Override
 	public String getConfigItemDisplayName(windowsObj w, int Slot) {
 		return filelist.s.getString("windows.window."+w.getSystemName()+".ObjList.object"+Slot+".DISPLAYNAME");
 	}
               
+	/* Get the Item Material out of the Configuration */
 	@Override
 	public Material getConfigItemMaterial(windowsObj w, int Slot) {
 		return Material.getMaterial(filelist.s.getString("windows.window."+w.getSystemName()+".ObjList.object"+Slot+".DISPLAYNAME"));
 	}
 
+	/* Check is the Item Enabled */
 	@Override
 	public boolean getConfigItemEnabled(windowsObj w, int Slot) {
 		return filelist.s.getBoolean("windows.window."+w.getSystemName()+".ObjList.object"+Slot+".DISABLED");
 	}
   
+	/* Get the Item Type
+	 * Item Types:
+	 *  - BUTTON
+	 *    This Type can Save this Tags:
+	 *      MetaData:
+	 *      - Display Name
+	 *      - Material
+	 *      - Lore
+	 *      - Action Type
+	 *      - Action Message
+	 *      - Action Permission
+	 *  - BOOK
+	 *    This Type can Save the Book Meta
+	 *      Meta data:
+	 *      - Title
+	 *      - Author
+	 *      - Pages
+	 *      - Lore
+	 *      -
+	 *  - LABEL
+	 *    This Type can Save this:
+	 *     Meta data:
+	 *     - DisplayName
+	 *     - Lore
+	 *     - Message on Click
+	 */
 	@Override
 	public String getConfigItemType(windowsObj w, int Slot) {
 		return filelist.s.getString("windows.window."+w.getSystemName()+".ObjList.object"+Slot+".TYPE");
@@ -55,6 +84,54 @@ public class itemObjLoader implements ItemConfigInterface {
 	@Override
 	public String getConfigItemActionMessage(windowsObj w, int Slot) {
 		return filelist.s.getString("windows.window."+w.getSystemName()+".ObjList.object"+Slot+".ACTION.MESSAGE");
+	}
+
+	@Override
+	public void setConfigItemDisplayName(windowsObj w, int Slot, String DisplayName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setConfigItemMaterial(windowsObj w, int Slot, Material Material) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setConfigItemEnabled(windowsObj w, int Slot, String Type) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setConfigItemType(windowsObj w, int Slot, String Type) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setConfigItemLore(windowsObj w, int Slot, List<String> Lore) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setConfigItemActionType(windowsObj w, int Slot, String ActionType) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setConfigItemActionPermission(windowsObj w, int Slot, String ActionPermission) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setConfigItemActionMessage(windowsObj w, int Slot, String ActionMessage) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	//TODO When the ItemConfigInterface is Finish add the Methods
