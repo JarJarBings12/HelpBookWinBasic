@@ -59,7 +59,7 @@ public class labelObj {
 		return this.LORE;
 	}
 	
-	public void setList(List<String> Lore) {
+	public void setLore(List<String> Lore) {
 		this.LORE = Lore;
 	}
 }

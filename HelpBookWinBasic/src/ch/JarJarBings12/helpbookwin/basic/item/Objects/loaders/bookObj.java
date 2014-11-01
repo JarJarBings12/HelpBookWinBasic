@@ -63,7 +63,7 @@ public class bookObj {
 		this.AUTHOR = Author;
 	}
 	
-	public List<String> getPAGES() {
+	public List<String> getPages() {
 		return this.PAGES;
 	}
 	
