@@ -3,6 +3,8 @@ package ch.JarJarBings12.helpbookwin.basic.windows.Objects;
 import org.bukkit.Location;
 
 import ch.JarJarBings12.helpbookwin.basic.files.filelist;
+import ch.JarJarBings12.helpbookwin.basic.item.Objects.loaders.bookObj;
+import ch.JarJarBings12.helpbookwin.basic.item.Objects.loaders.buttonLoader;
 
 public class windowsObj implements WindowsInterface {
 	private final String SYSTEMNAME;
@@ -93,4 +95,5 @@ public class windowsObj implements WindowsInterface {
 	public void setLines(int Lines) {
 		this.LINES = Lines;
 	}	
+	
 }

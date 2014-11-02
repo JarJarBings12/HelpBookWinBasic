@@ -5,15 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 
 import ch.JarJarBings12.helpbookwin.basic.files.filelist;
-import ch.JarJarBings12.helpbookwin.basic.item.Objects.itemObj;
 import ch.JarJarBings12.helpbookwin.basic.windows.Objects.windowsObj;
 
 public class JObjects {
+	
+	public static ArrayList<Player> inEdit = new ArrayList();
 	public static HashMap<String, Integer> cache = new HashMap();
 	public static List<windowsObj> windows = new ArrayList();
-	public static List<itemObj> items = new ArrayList();
 	
 	public void deleteWindow(String Window) {
 		if(cache.containsKey(Window)) {
@@ -21,4 +22,5 @@ public class JObjects {
 			windows.remove(cache.get(Window));	
 		}
 	}
+	
 }
