@@ -6,9 +6,14 @@ import org.bukkit.Material;
 
 import ch.JarJarBings12.helpbookwin.basic.files.filelist;
 import ch.JarJarBings12.helpbookwin.basic.item.Objects.loaders.typesinterfaces.BookConfigInterface;
+import ch.JarJarBings12.helpbookwin.basic.objects.WinBasic;
 import ch.JarJarBings12.helpbookwin.basic.windows.Objects.windowsObj;
 
-public class BookLoader implements BookConfigInterface {
+public class bookLoader implements BookConfigInterface {
+	
+	public bookLoader(WinBasic inWindow) {
+		WinBasic.inWindow = inWindow;
+	}
 	
 	@Override
 	public boolean isEnabled(windowsObj w, int Slot) {

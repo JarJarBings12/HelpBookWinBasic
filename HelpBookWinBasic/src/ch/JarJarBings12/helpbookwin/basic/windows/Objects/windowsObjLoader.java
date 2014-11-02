@@ -5,8 +5,14 @@ import java.io.IOException;
 
 import ch.JarJarBings12.helpbookwin.basic.files.filelist;
 import ch.JarJarBings12.helpbookwin.basic.objects.JObjects;
+import ch.JarJarBings12.helpbookwin.basic.objects.WinBasic;
 
 public class windowsObjLoader implements WinConfigInterface {
+	
+	public windowsObjLoader(WinBasic inWindow) {
+		WinBasic.inWindow = inWindow;
+	}
+
 	/*Load all Window Objects out of the Storage. */
 	public void loadWindowObjects() {
 		for(Object w : filelist.ca.getList("windows.cache")) {

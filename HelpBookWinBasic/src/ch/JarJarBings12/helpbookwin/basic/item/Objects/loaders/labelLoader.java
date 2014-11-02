@@ -6,9 +6,14 @@ import org.bukkit.Material;
 
 import ch.JarJarBings12.helpbookwin.basic.files.filelist;
 import ch.JarJarBings12.helpbookwin.basic.item.Objects.loaders.typesinterfaces.LabelConfigInterface;
+import ch.JarJarBings12.helpbookwin.basic.objects.WinBasic;
 import ch.JarJarBings12.helpbookwin.basic.windows.Objects.windowsObj;
 
 public class labelLoader implements LabelConfigInterface {
+
+	public labelLoader(WinBasic inWindow) {
+		WinBasic.inWindow = inWindow;
+	}
 
 	@Override
 	public String getConfigItemDisplayName(windowsObj w, int Slot) {
