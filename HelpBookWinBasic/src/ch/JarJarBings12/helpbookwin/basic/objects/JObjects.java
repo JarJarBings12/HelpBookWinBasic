@@ -13,14 +13,7 @@ import ch.JarJarBings12.helpbookwin.basic.windows.Objects.windowsObj;
 public class JObjects {
 	
 	public static ArrayList<Player> inEdit = new ArrayList();
-	public static HashMap<String, Integer> cache = new HashMap();
+	public static List<String> cache = new ArrayList();
 	public static List<windowsObj> windows = new ArrayList();
-	
-	public void deleteWindow(String Window) {
-		if(cache.containsKey(Window)) {
-			filelist.s.set("windows.window."+Window, null);
-			windows.remove(cache.get(Window));	
-		}
-	}
 	
 }

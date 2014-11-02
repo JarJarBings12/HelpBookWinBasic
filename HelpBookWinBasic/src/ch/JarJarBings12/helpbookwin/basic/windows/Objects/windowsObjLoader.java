@@ -16,11 +16,9 @@ public class windowsObjLoader implements WinConfigInterface {
 	/*Load all Window Objects out of the Storage. */
 	public void loadWindowObjects() {
 		for(Object w : filelist.ca.getList("windows.cache")) {
-			int i = 0;
 			windowsObj win = new windowsObj(w.toString(), getConfigWindowDisplayName(w.toString()), getConfigPermission(w.toString()), getConfigWindowLines(w.toString()), getConfigWindowEnabled(w.toString()), getConfigWindowOpenSound(w.toString()));
 			JObjects.windows.add(win);
-			JObjects.cache.put(win.getSystemName(), i);
-			i = i+1;
+			JObjects.cache.add(win.getSystemName());
 		}
 	}
 	
