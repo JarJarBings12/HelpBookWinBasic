@@ -2,6 +2,7 @@ package ch.JarJarBings12.helpbookwin.basic.windows.Objects;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import ch.JarJarBings12.helpbookwin.basic.files.filelist;
 import ch.JarJarBings12.helpbookwin.basic.objects.JObjects;
@@ -12,13 +13,24 @@ public class windowsObjLoader implements WinConfigInterface {
 	public windowsObjLoader(WinBasic inWindow) {
 		WinBasic.inWindow = inWindow;
 	}
-
+	public void initializeCacheList() {
+		JObjects.cache.clear();
+		if(filelist.ca.getList("windows.cache") != null) {
+			List INV = filelist.ca.getList("windows.cache");
+			for(Object w : INV) {
+				JObjects.cache.add(w.toString());
+			}
+			loadWindowObjects();
+			return;
+		} else {
+			System.out.println("[HelpBook:@HelpBookWinBasic]Windows list is Empty");
+		}
+	}
 	/*Load all Window Objects out of the Storage. */
 	public void loadWindowObjects() {
-		for(Object w : filelist.ca.getList("windows.cache")) {
-			windowsObj win = new windowsObj(w.toString(), getConfigWindowDisplayName(w.toString()), getConfigPermission(w.toString()), getConfigWindowLines(w.toString()), getConfigWindowEnabled(w.toString()), getConfigWindowOpenSound(w.toString()));
-			JObjects.windows.add(win);
-			JObjects.cache.add(win.getSystemName());
+		for(String ws : JObjects.cache) {
+			windowsObj w = new windowsObj(ws, getConfigWindowDisplayName(ws), getConfigPermission(ws), getConfigWindowLines(ws), getConfigWindowEnabled(ws), getConfigWindowOpenSound(ws));
+			JObjects.windows.add(w);
 		}
 	}
 	
